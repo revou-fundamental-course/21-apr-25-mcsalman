@@ -3,110 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Temperature converter</title>
 
     <!--external css-->
     <link rel="stylesheet" href="css\style.css">
 </head>
 
 <body> 
+
     <!--header content-->
-     <header>
-      
-     <h1 > 
-        Website konversi suhu - ala kang salmanz
     
+     <header>
+     <h1> 
+        <img width="320px" src="assets/bkgrn.png" >
+        
      </h1>    
-    </header>
+     </header>
+     
 
     <!--main content-->
     <main>
-        <!--introduction-->
-        <section class="tengah">
-         <p class=>Dengan menggunakan konversi suhu online, Anda dapat dengan mudah dan cepat mengkonversi suhu dari satu satuan ke satuan lainnya. Tidak perlu lagi melakukan perhitungan manual yang rumit dan memakan waktu. Konversi suhu online juga dapat membantu Anda menghindari kesalahan dalam perhitungan.
-        </p>
-
-         </section>
-
-        <!--form konversi suhu-->
-        <form class="section content">
-            <div>
-                <label for="konversi input">Celcius = (°C)</label>
-            </div>
-
-            <div class="formm">
-                <textarea id="konversi input"></textarea>
-            </div>
-           <!--action form-->
-            <div>
-                <button class="bg-1">konversi</button>
-                <button class="bg-2">reset</button>
-                <button class="bg-3">reverse</button>
-            </div>
-        </form>
-
-
-        <!--hasil konversi suhu-->
-        <section>
-            <div class="jenis">
-                <label for="result  input">Farenhait = (&deg;F):</label>
-            </div>
-
-            <div>
-                <textarea id="konversi input" readonly></textarea>
-            </div>
+        <br>
+        <div class="main-header">
+            <p>Dengan menggunakan konversi suhu online, Anda dapat dengan mudah dan cepat mengkonversi suhu 
+            dari satu satuan ke satuan lainnya. Tidak perlu lagi melakukan perhitungan manual yang rumit
+            dan memakan waktu. Konversi suhu online juga dapat membantu Anda menghindari kesalahan dalam 
+            perhitungan.</p>
             
-        </section>
+        </div>
+        <br>
 
-        <!--penjelasan-->
-        <section>
-        
-            <div>
-                <label for="calculate detail"> Cara Kalkulasi : </label>
-            </div>
+        <!--form konvert-->
+        <div class="section-content">
+            <label for="convertInput">Celsius(&deg;C):</label>
+            <textarea id="convertInput" rows="1" ></textarea>
+        </div>
 
-            <div>
-                <textarea id="calculate detail" readonly></textarea>
-            </div>
-            
-        </section>
+        <!--form action-->
+        <div class=" section-content" id="form-action">
+
+            <button id="btnConvert" onclick="validateForm();" class="bg-1">Konversi</button>
+            <button id="btnReset" class="bg-2">Reset</button>
+            <button id="btnReverse" class="bg-3">Reverse</button>
+        </div>
+
+        <!--hasil convert-->
+        <div class="section-content">
+            <label for="resulInput">Fahrenheit(&deg;F):</label>
+            <textarea id="resulInput" readonly rows="1"></textarea>
+        </div>
+
+        <!--rumus / penjelasan-->
+        <div class="section-content">
+            <label for="calculation">Cara Kalkulasi:</label>
+            <textarea id="calculation" readonly rows="1"></textarea>
+        </div>
+
 
         <!--informasi tambahan-->
-        <section>
-            <header> 
-                <h1> cara konversi suhu dari Celcius (&deg;C) ke Farenheit (&deg;F)</h1> 
-            </header>
-         <hr/>
-         <!--kontent informasi-->
-         <article>
-          <p> suhu <span class="formula">S</span> dalam derjat farenheit (&deg;F) </p>
+        <div>
+            <section>
+                <h1>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
+            </section>
+            <hr />
 
-          <!--formula-->
-          <div class="formula" 
-          S <sub>(&deg;F)</sub> =(S<sub>(&deg;C)</sub> x 9/5) +32
-          </div>
+            <p>
+                Suhu <span class="text-italic">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="text-italic">S</span> dalam derajat Celsius (&deg;C) kali 9/5 tambah 32.
+            </p>
 
-          <div>
-            atau
-          </div>
+            <p>
+                <span class="text-italic">S</span><sub>(&deg;F)</sub> = (<span class="text-italic">S</span><sub>(°C)</sub> × 9/5) + 32
+            </p>
 
-          <div class="formula" 
-          S <sub>(&deg;F)</sub> =(S<sub>(&deg;C)</sub> x 1.8) +32
-          </div>
+            <p>atau</p>
 
+            <p>
+                <span class="text-italic">S</span><sub>(&deg;F)</sub> = (<span class="text-italic">S</span><sub>(&deg;C)</sub>× 1.8) + 32
+            </p>
+        </div>
+    </div>
 
-
-         </article>
-        </section>
-
-
+    <script src="js/script.js"></script>
     </main>
     
     <!--footer content-->
     <footer>
-        <p> &copy; 2025 salman, All rights reversed,</p>
+        <p> &copy; 2025 mcsalman, All rights reversed,</p>
     </footer>
 
-    
+ 
 </body>
+
+
 </html>
